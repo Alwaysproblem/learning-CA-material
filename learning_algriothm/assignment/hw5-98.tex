@@ -1,0 +1,74 @@
+\documentstyle[12pt]{article}
+\input{psfig.sty}
+\input epsf
+\oddsidemargin 0cm      % this is margin in addition to the usual 1 inch
+\evensidemargin 0cm
+\textwidth 16.5cm
+
+%\oddsidemargin -0.5cm      % this is margin in addition to the usual 1 inch
+%\evensidemargin-0.5cm
+%\topmargin -1.9cm
+%\topmargin 0.0cm
+%\baselineskip 0.0cm
+
+%\textwidth 16.5cm
+%\textwidth 17.0cm
+%\textheight 24.7cm
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\tand}{\wedge}
+\newcommand{\tor}{\vee}
+\newcommand{\union}{\cup}
+\newcommand{\intersection}{\cap}
+\newcommand{\ch}{$\surd$}
+\newcommand{\pgm}[1]{{\sc #1}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+
+\begin{document}
+\begin{center}
+\large
+{\bf Machine Learning 15-681/781}\\
+Tom Mitchell, Fall 1998
+\end{center}
+
+\begin{center}
+\large  Homework Assignment 5\\
+Due Friday Dec 4, 1998 (turn in to Jean Harpley, Wean 5313)\\
+\ \\
+We have covered the material you need to answer questions 1,2, and 3, in
+previous lectures.
+
+\end{center}
+
+\be
+\item 
+Radial Basis Function networks\footnote{Important: Please note the equation on
+line three of page 239 is in error.  A minus sign should be added to the
+exponent.  A full set of errata for the textbook is available at
+www.cs.cmu.edu/$\sim$tom/mlbook.html}.  Consider a variant of the
+distance-weighted $k$ nearest neighbor algorithm defined in the text.  In
+particular, consider a variant which we will call Gaussian distance weighted
+nearest neighbor (GDWNN), in which (1) the classification for a query instance
+is calculated using equation 8.2 from the textbook, (2) $k$ is set equal to
+the number of training examples, and (3) the distance weight of equation 8.3
+is redefined as follows:
+\[ w_i \equiv e^{-\frac{1}{2}d^2(x_q,x_i)} \]
+
+True or false? For every possible set of training examples $D$, it is possible
+to construct a Radial Basis Function network that is equivalent to the GDWNN
+classifier for $D$.  (here ``equivalent to'' means that the two classifiers
+agree on the classification of every possible query instance).  If true,
+describe precisely your procedure for constructing the RBF network.  If false,
+explain why this is impossible.  (to convert your RBF network output to a
+boolean value, interpret outputs greater than or equal to zero as True, and
+outputs less than zero as False.
+\item Exercise 8.3 from the textbook.
+\item Exercise 9.4
+\item Exercise 13.2
+\ee
+
+\end{document}

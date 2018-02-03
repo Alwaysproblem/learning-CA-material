@@ -1,0 +1,87 @@
+\documentstyle[12pt]{article}
+\input{psfig.sty}
+\input epsf
+\oddsidemargin 0cm      % this is margin in addition to the usual 1 inch
+\evensidemargin 0cm
+\textwidth 16.5cm
+
+%\oddsidemargin -0.5cm      % this is margin in addition to the usual 1 inch
+%\evensidemargin-0.5cm
+%\topmargin -1.9cm
+%\topmargin 0.0cm
+%\baselineskip 0.0cm
+
+%\textwidth 16.5cm
+%\textwidth 17.0cm
+%\textheight 24.7cm
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\tand}{\wedge}
+\newcommand{\tor}{\vee}
+\newcommand{\union}{\cup}
+\newcommand{\intersection}{\cap}
+\newcommand{\ch}{$\surd$}
+\newcommand{\pgm}[1]{{\sc #1}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+
+\begin{document}
+\begin{center}
+\large
+{\bf Machine Learning 15-681/781}\\
+Tom Mitchell, Fall 1998
+\end{center}
+
+\begin{center}
+\large  Homework Assignment 4\\
+Due at beginning of class on Nov 17, 1998 \\
+\ \\
+
+\end{center}
+
+\be
+\item Exercise 5.2 from the textbook.
+\item Exercise 5.4
+\item Exercise 7.8
+\item Exercise 6.5
+
+\item This question asks you to consider the complexity of several
+probabilistic approaches to learning the $Cup$ target concept summarized in
+Table 12.3 (page 342) of the textbook.  Note all the attributes in this
+problem are boolean valued.
+
+\bi
+\item First consider using a Naive Bayes classifier to learn this target
+concept.  Exactly how many distinct probability terms must be estimated from
+the training data to learn a Naive Bayes classifier for this problem?
+
+\item 
+Now consider learning a Bayesian belief network to recognize $Cup$s, instead
+of a Naive Bayes Classifier.  In particular, use the network suggested by the
+domain theory in Table 12.3, and interpret each rule in the domain theory as a
+specification of the parents of the corresponding network variable.  (e.g.,
+the first rule in the domain theory specifies that $Parents(Cup) = \{ Stable,
+Liftable, OpenVessel \}$). 
+
+Draw the Bayes network as a graph with directed edges.  You may omit variables
+that are not mentioned by the domain theory.
+
+
+Exactly how many distinct probability terms must be estimated from the
+training data to learn the conditional probability tables for your network?
+
+
+\item
+Both of the above approaches make conditional independence assumptions to
+reduce the complexity of estimating $P(Cup | BottomIsFlat, ConcavityPointsUp,
+Expensive, \ldots)$ from the training data.  If no such assumptions are made,
+how many distinct probability terms must be estimated from the training data?
+
+\ei
+
+\ee
+
+\end{document}
